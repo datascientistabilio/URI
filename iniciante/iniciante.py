@@ -85,26 +85,50 @@ print(f"TRAPEZIO: {((float(a)+float(b))/2)*float(c):.3f}")
 print(f"QUADRADO: {float(b)*float(b):.3f}")
 print(f"RETANGULO: {float(a)*float(b):.3f}")
 
-# cod 1013
+# Maior cod 1013
+A, B, C = list(map(int, input().split(" ")))
+maior = max(A,B,C)
+print(maior, "eh o maior")
 
+# Consumo cod 1014
+x = int(input())
+y = float(input())
+print(f"{x/y:.3f}","km/l")
 
-# cod 1014
+# Distância entre dois pontos cod 1015
+x, y = list(map(float, input().split(" ")))
+z, w = list(map(float, input().split(" ")))
+d = ((z-x)**2+(w-y)**2) ** (1/2)
+print(round(d,4))
 
+# Distância cod 1016
+km_min = 2
+distancia = int(input())
+print(distancia*km_min,"minutos")
 
-# cod 1015
+# Gasto de combustivel cod 1017
+t = int(input());
+v = int(input());
+print(f'{(v*t)/12:.3f}')
 
+# Cédulas cod 1018
+valor = int(input())
+print(valor)
+cedulas = [100, 50, 20 , 10 , 5, 2, 1]
 
-# cod 1016
+for cedula in cedulas:
+  qtd_cedulas = int(valor/cedula)
+  print("{} nota(s) de R$ {},00".format(qtd_cedulas, cedula))
+  valor -= qtd_cedulas * cedula
 
-
-# cod 1017
-
-
-# cod 1018
-
-
-# cod 1019
-
+# Conversão de tempo cod 1019
+num = int(input())
+hora = num // 60**2
+num = num - hora * 60**2
+minuto = num // 60
+num = num - minuto*60
+segundo = num
+print('{}:{}:{}'.format(hora, minuto, segundo))
 
 
 # cod 1020
