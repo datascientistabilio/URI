@@ -160,14 +160,74 @@ for moeda in moedas:
     valor -= round(qtd_moedas * moeda, 2)
 
 
+# Teste de seleção 1035
+A, B, C, D = list(map(int, input().split(" ")))
 
+if B > C and D > A and C+D > A+B and A>0 and B>0 and C>0 and D>0 and A%2==0:
+  print("Valores aceitos")
+else:
+  print("Valores nao aceitos")
 
+# Fórmula de Bhaskara 1036
+a, b, c = list(map(float, input().split(" ")))
 
+if a == 0 or (b ** 2 - 4 * a * c) < 0:
+  print("Impossivel calcular")
+else:
+  x1 = (-b + (b ** 2 - 4 * a * c) ** (1 / 2)) / (2 * a)
+  x2 = (-b - (b ** 2 - 4 * a * c) ** (1 / 2)) / (2 * a)
+  print("R1 =",round(x1,5))
+  print("R2 =",round(x2,5))
 
+# Intervalo 1037
+num = float(input())
 
+if  num >=0 and num <=25:
+  print("Intervalo [0,25]")
+elif num >25 and num <=50:
+  print("Intervalo (25,50]")
+elif num >50 and num <=75:
+  print("Intervalo (50,75]")
+elif num >75 and num <=100:
+  print("Intervalo (75,100]")
+else:
+  print("Fora de intervalo")
 
+# 1047
+hora_inicial, minuto_inicial, hora_final, minuto_final = list(map(int,input().split(" ")))
 
+if hora_inicial < hora_final:
+    h = hora_final - hora_inicial
+    if minuto_inicial < minuto_final:
+        m = minuto_final - minuto_inicial
+    if minuto_inicial > minuto_final:
+        h = h - 1
+        m = (60 - minuto_inicial) + minuto_final
+    if minuto_inicial == minuto_final:
+        m = 0
 
+if hora_inicial > hora_final:
+    h = (24 - hora_inicial) + hora_final
+    if minuto_inicial < minuto_final:
+        m = minuto_final - minuto_inicial
+    if minuto_inicial > minuto_final:
+        h = h - 1
+        m = (60 - minuto_inicial) + minuto_final
+    if minuto_inicial == minuto_final:
+        m = 0
+
+if hora_inicial == hora_final:
+    if minuto_inicial < minuto_final:
+        m = minuto_final - minuto_inicial
+        h = 0
+    if minuto_inicial > minuto_final:
+        m = (60 - minuto_inicial) + minuto_final
+        h = 23
+    if minuto_inicial == minuto_final:
+        h = 24
+        m = 0
+
+print('O JOGO DUROU {} HORA(S) E {} MINUTO(S)'.format(h, m))
 
 
 
